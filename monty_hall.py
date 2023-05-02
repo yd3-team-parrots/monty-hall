@@ -1,3 +1,5 @@
+import random
+
 #Play the game 
 def monty_hall_game(switch, num_tests):
   win_switch_cnt = 0
@@ -38,3 +40,5 @@ def monty_hall_game(switch, num_tests):
       print('SOMETHING IS WRONG')
 
   return win_no_switch_cnt,win_switch_cnt,lose_no_switch_cnt,lose_switch_cnt, num_tests
+
+monty_hall_game(True, 2)
