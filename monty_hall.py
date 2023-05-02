@@ -9,17 +9,17 @@ def MontyHallSimulation (N):
     for i in range(0,N):
         
         # 1) The car is placed behind a random door.
-        WinningDoor=random.choice(['Door 1', 'Door 2', 'Door 3'])
+        WinningDoor=random.choice(['1번 문', '2번 문', '3번 문'])
 
         # 2) The contestant selects a random door.
-        FirstSelection=random.choice(['Door 1', 'Door 2', 'Door 3'])
+        FirstSelection=random.choice(['1번 문', '2번 문', '3번 문'])
         
         # 3) The host opens a door that is different than the contestants choice 
         #    and not the door with the car.
-        HostOpens=list(set(['Door 1', 'Door 2', 'Door 3'])-set([FirstSelection,WinningDoor]))[0]
+        HostOpens=list(set(['1번 문', '2번 문', '3번 문'])-set([FirstSelection,WinningDoor]))[0]
         
         # 4) The other door is not the participant's selected door and not the opened door. 
-        OtherDoor=list(set(['Door 1', 'Door 2', 'Door 3'])-set([FirstSelection,HostOpens]))[0]
+        OtherDoor=list(set(['1번 문', '2번 문', '3번 문'])-set([FirstSelection,HostOpens]))[0]
         
         # 5) Add "True" to a list where the participant DOES NOT change their selection AND thier 
         #    selection identified the door with the car. 
@@ -33,10 +33,10 @@ def MontyHallSimulation (N):
     #       As such, we can use the "sum" function to get the total number of wins
     #       for each strategy.
     print(f'\n\
-    {N:,} games were played \n\
-    Chances of winning the car based on the following strategies:\n\
-    Remaining with initial selection: {"{:.1%}".format(sum(ChoiceUnchanged)/N)}\n\
-    Switching doors: {"{:.1%}".format(sum(ChoiceChanged)/N)}')
+    {N:,} 게임이 진행되었습니다. \n\
+    다음 전략에 따라 자동차로 이길 확률 :\n\
+    초기 선택으로 남아있는 것 : {"{:.1%}".format(sum(ChoiceUnchanged)/N)}\n\
+    바뀐 문들 : {"{:.1%}".format(sum(ChoiceChanged)/N)}')
             
 ###############################            
 ###### Run the Simulation######
