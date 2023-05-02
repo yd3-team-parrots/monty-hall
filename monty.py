@@ -72,3 +72,5 @@ plt.xlim(1,runs)
 plt.show()
 print("Probability of Success on switching door for {} precision and {} runs is {}".format(precision, runs, total/runs))
 
+
+
