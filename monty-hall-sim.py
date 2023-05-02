@@ -10,7 +10,7 @@ def monty_hall():
         open_door = randint(0, 2)
 
     choice2 = choice1  # for while works
-    while choice2 == choice1 or choice2 == open_door:  # open_door isn't car/choice1
+    while choice2 == choice1 or choice2 == open_door:  # choice2 isn't car/choice1
         choice2 = randint(0, 2)
 
     return car == choice1, car == choice2  # return true/false
